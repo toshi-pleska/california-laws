@@ -70,10 +70,7 @@ small{color:var(--mu)}
 .pill.Postup{background:#12332f;color:#6fe0cf;border-color:#1e5b52}
 </style></head><body>
 <header><button id="menu" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button><div class="logo" onclick="home()"><div class="shield">★</div><div><b>MDT · California Laws</b><small>VENUX Roleplay</small></div></div><input id="q" type="search" placeholder="Hledat: PC 187, VC 23152, miranda, loupež…" autocomplete="off"></header>
- <div style="display:flex;gap:6px;margin-left:auto;align-self:center;">
-  <button onclick="setLang('cs')" id="btn-cs" type="button" style="padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--gold);color:#111;font-weight:700;cursor:pointer;">CZ</button>
-  <button onclick="setLang('en')" id="btn-en" type="button" style="padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--panel2);color:var(--tx);font-weight:700;cursor:pointer;">EN</button>
-</div>
+
 <nav id="nav"></nav><main id="main"></main><div id="toast"></div>
 <aside><h3>⚖ Spis a kalkulačka</h3><div id="case"><small>Žádné delikty. U zákona klikni na „Přidat do spisu“.</small></div>
 <div class="tot" id="tot"></div><button class="btn s" onclick="cs=[];renderCase()">Vyprázdnit spis</button>
@@ -1252,17 +1249,5 @@ $("#q").oninput=e=>{const q=e.target.value.toLowerCase().trim();
  if(q){const r=all.filter(x=>{const o=G(x.cat,x.key);return(x.id+(o?o.t+o.code+SEC.map(s=>o[s[0]]).join(" "):"")).toLowerCase().includes(q)});
   main.innerHTML="<div class='hero'><h2>Výsledky ("+r.length+")</h2></div><div class='wrap'>"+(r.map(x=>"<div class='res'><a onclick=\"$('#q').value='';$('#q').oninput({target:{value:''}});show('"+x.id+"')\">"+esc(title(x.cat,x.key))+"</a><br><small>"+x.cat+(G(x.cat,x.key)?" · "+G(x.cat,x.key).cls:"")+"</small></div>").join("")||"<p class='todo'>Nic nenalezeno. Zkus číslo paragrafu (např. „187“) nebo klíčové slovo.</p>")+"</div>"}else if(cur.startsWith("cat:"))showCat(cur.slice(4));else show(cur)};
 buildNav();home();
- function setLang(lang){
-  localStorage.setItem('lang', lang);
-  var btnCs = document.getElementById('btn-cs');
-  var btnEn = document.getElementById('btn-en');
-  if(btnCs && btnEn){
-    btnCs.style.background = lang==='cs'?'var(--gold)':'var(--panel2)';
-    btnCs.style.color = lang==='cs'?'#111':'var(--tx)';
-    btnEn.style.background = lang==='en'?'var(--gold)':'var(--panel2)';
-    btnEn.style.color = lang==='en'?'#111':'var(--tx)';
-  }
-  document.body.setAttribute('data-lang', lang);
-}
-document.addEventListener('DOMContentLoaded', function(){ setLang(localStorage.getItem('lang')||'cs'); });
+
 </script></body></html>
