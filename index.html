@@ -97,6 +97,7 @@ h2{font-size:24px}
 nav{border-right:0;border-bottom:1px solid var(--line)}
 .actions .btn{flex:1 1 auto}
 }
+.tbl td{white-space:pre-line}
 </style></head><body>
 <header><button id="menu" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button><div class="logo" onclick="home()"><div class="shield">★</div><div><b>MDT · California Laws</b><small>VENUX Roleplay</small></div></div><input id="q" type="search" placeholder="Hledat: PC 187, VC 23152, miranda, loupež…" autocomplete="off"><div class="lang" role="group" aria-label="Language"><button type="button" data-l="cs">CZ</button><button type="button" data-l="en">EN</button></div></header>
 <nav id="nav"></nav><main id="main"></main><div id="toast"></div>
@@ -1256,6 +1257,58 @@ Object.assign(D,{
 "response-codes":L("Response kódy (typické)","Server-specifické","Info","Code 1 běžný provoz, Code 2 urgentní, Code 3 světla a siréna, Code 4 pomoc není potřeba.","Použití světel a sirén dle policy a VC 21055.","VC 21055, 21057.","Neoprávněné použití = nehoda.","Dodržuj bezpečnost při Code 3.","RP: Code 3 jen při naléhavosti.","Obhájce zkoumá oprávnění k nouzové jízdě.","Zásahy na místě.","RP: kontroluj křižovatky.","Code 1 běžný • Code 2 urgentní • Code 3 světla + siréna • Code 4 bez pomoci"),
 "radio-call-etiquette":L("Pravidla rádiové komunikace","Policy","Info","Pravidla komunikace: identifikace, jasnost, stručnost.","Nepřerušuj nouzové volání, drž formát.","Policy.","Neodborná komunikace ohrožuje bezpečí.","Uveď volací znak a polohu.","RP: stručně.","—","Rádio.","RP: čti zpět.","Volací znak • Poloha • Stav • Žádost • Potvrzení")
 });
+// ===== Další Vehicle Codes + přehled kanálů → paragrafy (Discord kategorie Vehicle Code) =====
+C["Vehicle Codes"]="vc-prehled,"+C["Vehicle Codes"]+",vc-5200,vc-21651,vc-27150,vc-22348,vc-21950,vc-21663,vc-12951,vc-23114,vc-27803,vc-22100,vc-22102,vc-21461,vc-14602-6,vc-22651";
+Object.assign(D,{
+"vc-prehled":L("Přehled: kanály Vehicle Code → paragrafy","California Vehicle Code (VC)","Info",
+"Rychlý přehled, který paragraf Vehicle Code patří ke které dopravní situaci.\n\n• nezastavené-na-stopce → VC 22450(a)\n• jízda-bez-spz → VC 5200, 5201(a)\n• jízda-v-protisměru → VC 21651 (při útěku i VC 2800.4)\n• řízení-pod-vlivem → VC 23152(a)/(b), 23153\n• recles-driving → VC 23103, 23104\n• jízda-na-červenou → VC 21453(a)\n• nelegální-tuning → VC 27150, 26708(a), 27156\n• jízda-bez-řp → VC 12500, 14601, 14602.6\n• ujíždění-hlídce → VC 2800.1, 2800.2, 2800.3\n• překročení-rychlosti → VC 22350, 22349, 22348\n• ujetí-od-dopravní-nehody → VC 20001, 20002\n• jízda-přes-pěší-zónu → VC 21950, 21663\n• odmítnutí-předložit-řidičák → VC 12951(b)\n• jízda-s-potenciálně-nebezp… → VC 23114 (název kanálu je ve screenshotu oříznutý, ověř)\n• jízda-na-motorce-bez-helmy → VC 27803\n• nepovolené-otáčení → VC 22100, 22102",
+"Kliknutím v menu vlevo otevřeš tabulku konkrétního paragrafu. U každého je úroveň deliktu a sazba.",
+"VC 2800.1, 5200, 12500, 12951, 14601, 20001, 21453, 21651, 21950, 22100, 22348, 22350, 22450, 23103, 23114, 23152, 27150, 27803.",
+"Úroveň deliktu: Infraction (pokuta), Misdemeanor (do 6 měsíců až 1 rok), Wobbler a Felony (vězení). Sazby u jednotlivých paragrafů jsou orientační.",
+"Při dopravní kontrole zapiš konkrétní paragraf, ne jen název přestupku.",
+"RP: u každého zásahu vždy uveď číslo paragrafu VC.",
+"Obhájce kontroluje, zda citovaný paragraf odpovídá popsanému chování.",
+"Přehled slouží k rychlé orientaci při citaci, v praxi vždy dohledej přesný paragraf.",
+"RP: řidič jede na červenou → VC 21453(a); jede bez ŘP → VC 12500."),
+"vc-5200":Lx(197,0,"SPZ vpředu i vzadu","VC § 5200","Infraction","Vozidlo musí mít na přední i zadní straně platnou, čitelnou poznávací značku.","Značka musí být řádně upevněna a viditelná. Chybějící značka je důvod k zastavení.","VC 5200, 5201(a), 4462.5.","Infraction: orientačně $197 (ověř), často fix-it.","Zapiš, která značka chybí, ověř vozidlo a majitele.","RP: jízda bez SPZ = zastavení + kontrola VIN.","Obhájce zkoumá, zda byla značka ztracena a nahlášena.","Auta bez značek nebo se zakrytou SPZ.","RP: bez SPZ ověř VIN a registraci."),
+"vc-21651":Lx(238,0,"Jízda v protisměru / přes dělicí pás","VC § 21651","Infraction","Zákaz jet proti směru jízdy na oddělené komunikaci nebo přejíždět dělicí pás.","Řidič musí jet v povoleném směru. Úmyslná jízda v protisměru na útěku je těžší delikt (VC 2800.4).","VC 21651, 21650, 2800.4.","Infraction: orientačně $238 (ověř). 2800.4: Misdemeanor při evadingu.","Zastavit provoz, zajistit bezpečí, citace nebo zatčení při úmyslu nebo DUI.","RP: protisměr je akutní ohrožení.","Obhájce hledá nutnost nebo chybné značení.","Řidiči vjíždějící na dálnici špatným směrem.","RP: nejdřív bezpečí, pak citace."),
+"vc-27150":Lx(197,0,"Nelegální tuning – výfuk a hluk","VC §§ 27150, 27151","Infraction","Výfukový systém musí být udržován tak, aby nevytvářel nadměrný hluk. Nepovolené úpravy výfuku jsou zakázané.","Hlučnost se posuzuje podle limitu (typicky 95 dB u 27151). Další úpravy: tónování (26708), osvětlení a podvozek.","VC 27150, 27151, 26708(a), 27156 (ověř).","Infraction: orientačně $197 (ověř), často fix-it.","Zdokumentuj úpravu, hlasitost a popiš vozidlo. Můžeš vystavit fix-it.","RP: tuning = opravit a ukázat doklad.","Obhájce předloží doklad o legálním výfuku nebo certifikát.","Hlasité výfuky a nelegální úpravy.","RP: nejdřív oprava, pak vrácení."),
+"vc-22348":Lx(500,0,"Překročení maximální rychlosti (65/70/100 mph)","VC §§ 22348, 22349","Infraction","Absolutní maximální rychlosti na dálnicích. Jízda nad 100 mph je zakázaná i bez ohledu na značky.","Základní limit je 65 mph, na vybraných dálnicích 70 mph (22349). Nad 100 mph viz 22348(b).","VC 22348, 22349, 22350, 23103.","Infraction: orientačně $500 u 100+ mph (ověř). Reckless driving při ohrožení.","Změř rychlost radarem nebo pacingem, zapiš limit a rychlost. Zvaž VC 23103.","RP: u extrémní rychlosti zvaž reckless driving.","Obhájce zpochybňuje kalibraci radaru.","Dálniční kontroly.","RP: radarové měření + zápis času a místa."),
+"vc-21950":Lx(238,0,"Přednost chodcům na přechodu","VC § 21950","Infraction","Řidič musí dát přednost chodci v přechodu pro chodce.","Řidič musí zastavit nebo zpomalit, dokud chodec nepřejde. Chodec nesmí náhle vstoupit do vozovky.","VC 21950, 21954, 21955.","Infraction: orientačně $238 (ověř).","Zapiš polohu přechodu, chodce a chování řidiče.","RP: chodec na přechodu má vždy přednost.","Obhájce hledá náhlý vstup chodce.","Nehody s chodci.","RP: při zranění zvaž těžší paragrafy."),
+"vc-21663":Lx(238,0,"Jízda po chodníku / pěší zóně","VC § 21663","Infraction","Zákaz jízdy motorovým vozidlem po chodníku s výjimkou vjezdu na přilehlý pozemek.","Pěší zóna a chodník jsou určeny chodcům. Vjezd je dovolen jen k výjezdu z pozemku.","VC 21663, 21950.","Infraction: orientačně $238 (ověř). Při ohrožení chodců zvaž VC 23103.","Dokumentuj trasu a ohrožení chodců.","RP: ohrožení lidí zvyšuje závažnost.","Obhájce hledá nutnost.","Řidiči projíždějící pěší zónou.","RP: u ohrožení zvaž reckless."),
+"vc-12951":Lx(150,0,"Odmítnutí předložit řidičský průkaz","VC § 12951(b)","Infraction","Řidič musí na výzvu policisty předložit řidičský průkaz.","Odmítnutí je přestupek a důvod k dalšímu ověření totožnosti (PC 148.9 u falešné identity).","VC 12951(a), 12951(b), PC 148.9.","Infraction: orientačně $100–$200 (ověř).","Vyzvi opakovaně, ověř totožnost přes databázi, při lži PC 148.9.","RP: dej varování, poté citace.","Obhájce zkoumá, zda bylo zastavení zákonné.","Řidič odmítá předložit doklady.","RP: odmítnutí = ověř totožnost jinak."),
+"vc-23114":Lx(238,0,"Nezajištěný nebo ohrožující náklad","VC § 23114","Infraction","Náklad vozidla musí být zajištěn, aby nepadal ani nevyletoval na silnici.","Nebezpečný nebo nezajištěný náklad ohrožuje ostatní řidiče. Název kanálu na screenshotu je oříznutý, ověř, zda máš na mysli jiný paragraf.","VC 23114, 23115, 31303 (ověř).","Infraction: orientačně $238 (ověř).","Zapiš druh nákladu, způsob zajištění a ohrožení.","RP: nebezpečný náklad = zastavit a zajistit.","Obhájce zkoumá, zda náklad skutečně ohrožoval provoz.","Nezajištěný náklad na pickupech.","RP: zajisti náklad před pokračováním."),
+"vc-27803":Lx(197,0,"Motorkář bez helmy","VC § 27803","Infraction","Řidič i spolujezdec motocyklu musí nosit schválenou ochrannou přilbu.","Helma musí splňovat bezpečnostní normy a být správně upevněna.","VC 27803, 27802.","Infraction: orientačně $197 (ověř), často fix-it.","Zapiš typ helmy a označ porušení.","RP: bez helmy = citace.","Obhájce předloží doklad o schválené helmě.","Motorkáři bez helmy.","RP: citace + varování."),
+"vc-22100":Lx(238,0,"Nepovolené odbočení","VC § 22100","Infraction","Pravidla pro odbočování vlevo a vpravo na křižovatce a mimo ni.","Odbočit lze jen z patřičného pruhu a se signalizací (22107).","VC 22100, 22101, 22107.","Infraction: orientačně $238 (ověř).","Zdokumentuj způsob odbočení.","RP: špatné odbočení = citace.","Obhájce zkoumá označení a viditelnost značek.","Špatné odbočení na křižovatce.","RP: signalizace je povinná."),
+"vc-22102":Lx(238,0,"Nepovolené otáčení (U-turn)","VC § 22102","Infraction","Otáčení vozidla na komunikaci je omezené a povolené jen na místech, kde to zákon dovoluje.","V obchodní čtvrti je U-turn povolen jen na křižovatce, v obytné oblasti za dodržení pravidel (22103).","VC 22102, 22103.","Infraction: orientačně $238 (ověř).","Zapiš místo a viditelnost značek.","RP: U-turn na zakázaném místě = citace.","Obhájce hledá povolené místo.","Otáčení na rušné třídě.","RP: dokumentuj místo."),
+"vc-21461":Lx(238,0,"Neuposlechnutí dopravní značky nebo signálu","VC § 21461(a)","Infraction","Řidič musí dodržovat dopravní značky, signály a znamení.","Platí pro všechna dopravní značení, ne jen semafory.","VC 21461, 21453, 22450.","Infraction: orientačně $238 (ověř).","Zdokumentuj značku a chování řidiče.","RP: popiš značku.","Obhájce zkoumá viditelnost značky.","Porušení značek.","RP: citace."),
+"vc-14602-6":L("Zabavení vozidla na 30 dní","VC § 14602.6","Info","Policista může vozidlo zajistit na 30 dní, pokud řídil nelicencovaný řidič nebo osoba s pozastaveným ŘP.","Majitel může požádat o slyšení (storage hearing). Poplatky za odtah nese majitel.","VC 14602.6, 14601, 12500, 22651.","Tento paragraf je procesní, nemá vlastní trest.","Vyplň impound report a poučení majitele.","RP: odtah po řízení bez ŘP.","Obhájce napadá zákonnost odtahu.","Odtahy po kontrolách bez ŘP.","RP: poučit o slyšení."),
+"vc-22651":L("Důvody k odtahu vozidla","VC § 22651","Info","Seznam situací, kdy policista smí vozidlo odtáhnout.","Např. zatčení řidiče (22651(h)), prošlá registrace nad 6 měsíců (22651(o)), blokování provozu, vozidlo stojící nad 72 hodin (22651(k)).","VC 22651, 22850, 14602.6.","Neoprávněný odtah může vést k občanské žalobě.","Zapiš zákonný důvod, stav vozidla a inventář.","RP: vždy uveď písmeno paragrafu.","Obhájce napadá důvod odtahu.","Vozidla zablokovaná na silnici.","RP: odtah jen se zákonným důvodem.")
+});
+// ===== NOVÉ VEHICLE CODES (podle kanálů z Discordu) =====
+C["Vehicle Codes"]+=",vc-21651,vc-21663,vc-12951,vc-24002,vc-27803,vc-22100,vc-27150,vc-21950,vc-22400";
+Object.assign(D,{
+"vc-21651":Lx(238,0,"Jízda v protisměru (Wrong Way)","VC §§ 21651, 21652, 2800.4","Infraction","Jízda proti směru jízdy na rozdělené silnici, přejetí svodidla nebo vjezd do dálničního sjezdu v opačném směru.","Je zakázáno jet po špatné straně rozdělené silnice nebo najet na rampu opačně.","VC 21651(a)(b), 21652, 2800.4 (protisměr při útěku před policií).","Infraction: orientačně $238 a 1 bod; při útěku před policií viz VC 2800.4 (misdemeanor).","Okamžitě zastav provoz rádiem, vyhlas nebezpečí a dokumentuj trasu.","RP: protisměr = vždy bezpečnost nejdřív.","Obhájce hledá nutnost (např. nouze).","Dálnice, sjezdy, rozdělené silnice.","RP: hlas rádiem a zastav provoz."),
+"vc-21663":Lx(238,0,"Jízda po chodníku / pěší zóně","VC §§ 21663, 21950","Infraction","Zákaz řídit vozidlo po chodníku nebo pěší zóně, s výjimkou přejezdu k vjezdu.","Pěší mají na chodníku a přechodech přednost a chodník není komunikace pro vozidla.","VC 21663, 21950, 22500(f) (parkování na chodníku).","Infraction: orientačně $238; při zranění chodce navíc PC 245 nebo VC 20001.","Zapiš polohu, ohrožení chodců a identifikaci řidiče.","RP: při zranění chodce přísnější postup.","Obhájce hájí nezbytnost přejezdu.","Jízda přes pěší zónu v centru.","RP: popiš ohrožení pěších."),
+"vc-12951":Lx(25,0,"Odmítnutí předložit řidičský průkaz","VC §§ 12951, 12500","Infraction","Řidič musí mít u sebe řidičský průkaz a na výzvu policisty ho předložit.","Neprokázání totožnosti a oprávnění vede k ověření v databázi a případnému zatčení při podezření na falešnou identitu.","VC 12951(a)(b), 12500, PC 148.9.","Infraction/fix-it: orientačně $25 + poplatky, pokud se prokáže platný ŘP (ověř).","Ověř totožnost přes databázi, vyzvi k předložení a při lži použij PC 148.9.","RP: dvakrát vyzvi a zdokumentuj.","Obhájce předloží platný ŘP u soudu.","Kontroly bez dokladů.","RP: ověř identitu jinak."),
+"vc-24002":Lx(197,0,"Nebezpečné nebo nezabezpečené vozidlo / náklad","VC §§ 24002, 23114, 26454","Infraction","Provoz vozidla v nebezpečném stavu nebo s nezajištěným, padajícím či nebezpečným nákladem.","Vozidlo musí být bezpečné a náklad zajištěný.","VC 24002, 23114 (padající náklad), 26454, 31303 (nebezpečné látky, ověř).","Infraction: orientačně $197 (ověř); může následovat odtah při bezprostředním ohrožení.","Zkontroluj stav vozidla a zabezpeč místo.","RP: ohrožení = odstavit vozidlo.","Obhájce zpochybňuje nebezpečnost.","Převoz nákladu a špatný technický stav.","RP: zdokumentuj stav fotografií."),
+"vc-27803":Lx(162,0,"Motorka bez helmy","VC § 27803","Infraction","Řidič i spolujezdec motocyklu musí mít schválenou helmu.","Helma musí splňovat standard DOT.","VC 27803, 27802.","Infraction: orientačně $162 s poplatky (ověř).","Zdokumentuj nepřítomnost helmy a vydej citaci.","RP: helma povinná.","Obhájce zkoumá, zda helma splňovala normu.","Kontroly motorkářů.","RP: citace."),
+"vc-22100":Lx(238,0,"Nepovolené otáčení (U-turn)","VC §§ 22100, 22102, 22103","Infraction","Otáčení vozidla je omezené zejména v obchodní zóně a na křižovatkách se semafory.","Otáčení nesmí ohrozit provoz a v obchodních zónách je omezené.","VC 22100, 22102, 22103.","Infraction: orientačně $238.","Zdokumentuj místo, provoz a ohrožení.","RP: citace.","Obhájce hájí povolené místo.","Otočení na křižovatce.","RP: popiš místo."),
+"vc-27150":Lx(197,0,"Nelegální tuning (výfuk, hluk a úpravy)","VC §§ 27150, 27151, 26708","Infraction","Nepovolené úpravy vozidla: hlučný výfuk, odstranění tlumiče, tónování nebo úpravy snižující bezpečnost.","Úpravy nesmí překročit zákonné limity hluku a bezpečnosti.","VC 27150, 27151, 26708, 27156 (ověř).","Infraction/fix-it: orientačně $197 (ověř); možný odtah při nebezpečí.","Změř hluk nebo vizuálně zdokumentuj úpravu.","RP: fix-it citace.","Obhájce zpochybňuje měření.","Kontroly tuningu.","RP: zapiš úpravy."),
+"vc-21950":Lx(238,0,"Přednost chodce na přechodu","VC §§ 21950, 21951","Infraction","Řidič musí dát přednost chodci na přechodu a zastavit před ním.","Přednost platí i na nevyznačených přechodech u křižovatek.","VC 21950, 21951, 21954.","Infraction: orientačně $238; při zranění viz VC 20001.","Zapiš polohu a chodce, zdokumentuj chování.","RP: citace.","Obhájce hájí nepřehlednost.","Přejezdy u přechodů.","RP: popiš viditelnost."),
+"vc-22400":Lx(238,0,"Blokování provozu (Impeding Traffic)","VC § 22400","Infraction","Řidič nesmí jet tak pomalu, aby blokoval plynulý provoz, pokud to nevyžaduje bezpečnost.","Výjimky: bezpečnost, technické potíže, nařízení.","VC 22400, 21654.","Infraction: orientačně $238.","Dokumentuj délku a důvod blokování.","RP: citace.","Obhájce hájí bezpečnost.","Pomalá jízda v levém pruhu.","RP: zapiš následky na provoz.")
+});
+Object.assign(window.DEN,{
+"vc-21651":{t:"Wrong-Way Driving",def:"Driving against the direction of traffic on a divided highway, crossing a barrier or entering a freeway ramp the wrong way.",pen:"Infraction: roughly $238 and 1 point; when fleeing police see VC 2800.4 (misdemeanor).",leo:"Immediately stop traffic via radio, announce the danger and document the route.",sum:"RP: wrong way = safety first.",real:"Freeways, off-ramps, divided roads."},
+"vc-21663":{t:"Driving on a Sidewalk / Pedestrian Zone",def:"Driving a vehicle on a sidewalk or pedestrian zone is prohibited, except crossing to reach a driveway.",pen:"Infraction: roughly $238; if a pedestrian is injured add PC 245 or VC 20001.",leo:"Record the location, the danger to pedestrians and the driver's identity.",sum:"RP: with injured pedestrians use a stricter procedure.",real:"Driving through a pedestrian zone downtown."},
+"vc-12951":{t:"Refusing to Present a Driver's License",def:"A driver must carry a driver's license and present it when a peace officer asks.",pen:"Infraction/fix-it: roughly $25 + fees if a valid license is proven (verify).",leo:"Verify identity through the database, request the license and use PC 148.9 if the driver lies.",sum:"RP: ask twice and document.",real:"Stops where the driver has no documents."},
+"vc-24002":{t:"Unsafe Vehicle or Unsecured Load",def:"Operating a vehicle in an unsafe condition or with an unsecured, falling or hazardous load.",pen:"Infraction: roughly $197 (verify); the vehicle may be towed if it is an immediate hazard.",leo:"Inspect the condition of the vehicle and secure the scene.",sum:"RP: if it is a hazard, take the vehicle off the road.",real:"Hauling loads and poor mechanical condition."},
+"vc-27803":{t:"Motorcycle Without a Helmet",def:"The motorcycle rider and passenger must wear an approved helmet.",pen:"Infraction: roughly $162 with fees (verify).",leo:"Document the missing helmet and issue a citation.",sum:"RP: helmet required.",real:"Checks of motorcyclists."},
+"vc-22100":{t:"Illegal U-Turn",def:"U-turns are restricted, especially in business districts and at signalized intersections.",pen:"Infraction: roughly $238.",leo:"Document the location, the traffic and the danger.",sum:"RP: citation.",real:"A U-turn at an intersection."},
+"vc-27150":{t:"Illegal Tuning (Exhaust, Noise and Modifications)",def:"Unauthorized vehicle modifications: loud exhaust, removed muffler, tint or modifications that reduce safety.",pen:"Infraction/fix-it: roughly $197 (verify); possible tow when dangerous.",leo:"Measure noise or document the modification visually.",sum:"RP: fix-it citation.",real:"Tuning checks."},
+"vc-21950":{t:"Pedestrian Right of Way at Crosswalks",def:"A driver must yield to a pedestrian in a crosswalk and stop before it.",pen:"Infraction: roughly $238; if there is an injury see VC 20001.",leo:"Record the location and the pedestrian, document the driver's behavior.",sum:"RP: citation.",real:"Crossings near crosswalks."},
+"vc-22400":{t:"Impeding Traffic",def:"A driver must not drive so slowly that it blocks normal traffic, unless safety requires it.",pen:"Infraction: roughly $238.",leo:"Document the duration and the reason for blocking.",sum:"RP: citation.",real:"Slow driving in the left lane."}
+});
 // ===== LOGIKA =====
 const $=s=>document.querySelector(s),nav=$("#nav"),main=$("#main");
 let cs=[],cur="home",all=[];
@@ -1492,6 +1545,58 @@ function tr(s){
   return s;
 }
 let busy=false,pending=false;
+/* ===== Automatický překlad všeho, co nemá ruční anglický překlad (EN) ===== */
+const CK="mdt-trcache";
+let cache={};
+try{cache=JSON.parse(localStorage.getItem(CK)||"{}")||{}}catch(e){cache={}}
+let saveT=null;
+function saveCache(){ // uložení mezipaměti (při zaplnění úložiště se mezipaměť vymaže)
+  clearTimeout(saveT);
+  saveT=setTimeout(()=>{try{localStorage.setItem(CK,JSON.stringify(cache))}catch(e){cache={};try{localStorage.removeItem(CK)}catch(e2){}}},600);
+}
+// Rozpoznání češtiny: diakritika nebo typická česká slova
+const CZ_CHARS=/[ěščřžýáíéúůďťňóĚŠČŘŽÝÁÍÉÚŮĎŤŇÓ]/;
+const CZ_WORDS=/\b(je|se|při|nebo|musí|jako|podle|bez|aby|který|která|které|pokud|kde|když|před|také|jen|lze|může|není|jsou|být|ale)\b/i;
+const looksCzech=s=>s.trim().length>2&&(CZ_CHARS.test(s)||CZ_WORDS.test(s));
+// Poskytovatel překladu: 1) vestavěný překladač Chrome (Translator API), 2) online záloha
+let trP=null;
+const getTranslator=()=>trP||(trP=(async()=>{
+  try{
+    if("Translator" in self){
+      const o={sourceLanguage:"cs",targetLanguage:"en"};
+      if((await Translator.availability(o))!=="unavailable")return await Translator.create(o);
+    }
+  }catch(e){}
+  return null;
+})());
+async function translateText(text){
+  const t=await getTranslator();
+  if(t){try{return await t.translate(text)}catch(e){}}
+  const r=await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=cs&tl=en&dt=t&q="+encodeURIComponent(text));
+  if(!r.ok)throw new Error("HTTP "+r.status);
+  const j=await r.json();
+  return j[0].map(x=>x[0]).join("");
+}
+const queue=[];let active=0,fails=0,warned=false;
+function auto(n){
+  if(n.__q)return;
+  n.__q=true;queue.push(n);pump();
+}
+function pump(){
+  while(active<4&&queue.length){
+    const n=queue.shift();active++;
+    const src=n.__o.trim();
+    translateText(src).then(res=>{
+      if(!res)return;
+      cache[src]=res;saveCache();
+      if(lang==="en"&&n.isConnected)n.nodeValue=n.__o.replace(src,()=>res);
+    }).catch(()=>{
+      fails++;
+      if(fails>=3&&!warned){warned=true;try{toast("Auto-translation is unavailable – check your internet connection (or use desktop Chrome).")}catch(e){}}
+    }).finally(()=>{active--;n.__q=false;pump()});
+  }
+}
+
 function walk(root){
   const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
   let n;
@@ -1499,7 +1604,12 @@ function walk(root){
     const p=n.parentNode;
     if(p&&/^(SCRIPT|STYLE)$/.test(p.nodeName))continue;
     if(n.__o===undefined)n.__o=n.nodeValue;
-    const t=lang==="en"?tr(n.__o):n.__o;
+    let t=lang==="en"?tr(n.__o):n.__o;
+    // V EN režimu: text, který slovník nezná a je česky, se přeloží automaticky (nebo vezme z mezipaměti)
+    if(lang==="en"&&t===n.__o&&looksCzech(t)){
+      const c=cache[t.trim()];
+      if(c)t=t.replace(t.trim(),()=>c);else auto(n);
+    }
     if(n.nodeValue!==t)n.nodeValue=t;
   }
 }
@@ -1528,5 +1638,4 @@ document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",
 run();
 })();
 </script>
- 
 </body></html>
