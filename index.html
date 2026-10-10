@@ -1071,7 +1071,7 @@ Object.assign(D,{
 "Obhájce sleduje výsledky a využívá je.",
 "Vyšetřování velkých měst.",
 "RP: počítej s auditem."),
-"spiknutí":Lx(250000,60,"Spiknutí (Conspiracy)","18 U.S.C. § 371; PC § 182","Felony",
+"spiknutí":Lx(250000,60,"Federální spiknutí (Federal Conspiracy)","18 U.S.C. § 371; PC § 182","Felony",
 "Dohoda dvou nebo více osob spáchat delikt nebo podvést USA a jeden overt act.",
 "Je třeba prokázat dohodu, úmysl a overt act.",
 "18 U.S.C. 371, 1349, PC 182.",
@@ -1308,6 +1308,63 @@ Object.assign(window.DEN,{
 "vc-27150":{t:"Illegal Tuning (Exhaust, Noise and Modifications)",def:"Unauthorized vehicle modifications: loud exhaust, removed muffler, tint or modifications that reduce safety.",pen:"Infraction/fix-it: roughly $197 (verify); possible tow when dangerous.",leo:"Measure noise or document the modification visually.",sum:"RP: fix-it citation.",real:"Tuning checks."},
 "vc-21950":{t:"Pedestrian Right of Way at Crosswalks",def:"A driver must yield to a pedestrian in a crosswalk and stop before it.",pen:"Infraction: roughly $238; if there is an injury see VC 20001.",leo:"Record the location and the pedestrian, document the driver's behavior.",sum:"RP: citation.",real:"Crossings near crosswalks."},
 "vc-22400":{t:"Impeding Traffic",def:"A driver must not drive so slowly that it blocks normal traffic, unless safety requires it.",pen:"Infraction: roughly $238.",leo:"Document the duration and the reason for blocking.",sum:"RP: citation.",real:"Slow driving in the left lane."}
+});
+// ===== NOVÉ POLOŽKY PODLE SERVEROVÉHO MDT (bez převzatých RP cen; sazby jsou kalifornské, orientační) =====
+C["Penal Codes"]+=",pc-240,pc-30605,pc-18710,pc-215,pc-206,pc-29800,pc-25850,pc-26350,pc-314,pc-530-5,pc-33410,pc-30306,pc-27545,pc-236-1,pc-532,pc-664,pc-646-9,pc-246-3,pc-26100,pc-518,pc-186-22,pc-261,pc-503,pc-4530,pc-451";
+C["Health & Safety Code"]+=",hs-11358,hs-11360,hs-11366,hs-11370-1,hs-11379-6";
+C["Vehicle Codes"]+=",vc-22106,vc-25950";
+// Zkratka: bez sekcí pravidla a shrnutí (prázdné řádky se v tabulce nezobrazí)
+const Q=(f,m,t,code,cls,def,pen,leo)=>Lx(f,m,t,code,cls,def,"",code,pen,leo,"");
+Object.assign(D,{
+"pc-240":Q(1000,6,"Výhrůžný útok bez zranění (Assault)","PC §§ 240, 241","Misdemeanor","Protiprávní pokus o fyzický útok nebo čin, který způsobí rozumný strach z bezprostředního násilí, bez nutnosti zranění.","Misdemeanor: do 6 měsíců a/nebo $1 000 (u policisty výš, PC 241).","Zapiš výhrůžné chování, svědky a vzdálenost."),
+"pc-30605":Q(0,12,"Držení útočné zbraně (Assault Weapon)","PC § 30605","Wobbler","Nelegální držení zakázané útočné zbraně v Kalifornii.","Wobbler: do 1 roku v okresním vězení nebo 1170(h) (ověř).","Ověř model, sériové číslo a legální status."),
+"pc-18710":Q(10000,12,"Zakázané výbušniny a ničivá zařízení","PC § 18710","Wobbler","Držení destruktivního zařízení (např. bomba, granát) bez povolení.","Wobbler: do 1 roku a $10 000 nebo felony (ověř).","Evakuace, přivolání EOD, nezacházej s předmětem."),
+"pc-215":Q(10000,36,"Loupež vozidla s násilím (Carjacking)","PC § 215","Felony","Odnětí vozidla osobě násilím nebo hrozbou s úmyslem je trvale nebo dočasně zbavit.","Felony: 3, 5 nebo 9 let.","Zadrž podezřelé, zajisti vozidlo, svědky a kamery."),
+"pc-206":Q(10000,0,"Mučení (Torture)","PC § 206","Felony","Úmyslné způsobení těžké bolesti nebo utrpení z pomsty, vydírání nebo jiného nezákonného důvodu.","Felony: doživotí s možností podmíněného propuštění (kalkulačka čas nepočítá).","Zajisti místo, ošetření, dokumentaci zranění."),
+"pc-29800":Q(10000,12,"Držení zbraně zakázanou osobou","PC § 29800","Wobbler","Osoba odsouzená za felony nebo jinak zakázaná nesmí držet střelnou zbraň.","Wobbler: do 1 roku a do $10 000 nebo 16 měs./2/3 roky.","Ověř status osoby v databázi, zajisti zbraň."),
+"pc-25850":Q(1000,12,"Nabitá zbraň na veřejnosti","PC § 25850","Misdemeanor","Nošení nabité střelné zbraně na veřejnosti nebo ve vozidle bez licence.","Misdemeanor: do 1 roku a/nebo $1 000; při přitěžujících okolnostech felony.","Ověř, zda je zbraň nabitá a zda existuje licence."),
+"pc-26350":Q(1000,12,"Viditelné nošení zbraně (Open Carry)","PC § 26350","Misdemeanor","Viditelné nošení nenabité pistole na veřejnosti, kde je to zakázané (např. ve městech).","Misdemeanor: do 1 roku a/nebo $1 000 (ověř).","Ověř typ zbraně, místo a licenci."),
+"pc-314":Q(1000,6,"Nemravné obnažování na veřejnosti","PC § 314","Misdemeanor","Úmyslné obnažení intimních partií na veřejnosti nebo před jinými osobami.","Misdemeanor: do 6 měsíců, případně registrace při recidivě (ověř).","Zdokumentuj okolnosti a svědky."),
+"pc-530-5":Q(1000,12,"Zneužití osobních údajů (Identity Theft)","PC § 530.5","Wobbler","Použití cizích identifikačních údajů k získání výhody bez souhlasu.","Wobbler: do 1 roku a $1 000 nebo 16 měs./2/3 roky.","Zajisti doklady, elektronické záznamy a oběť."),
+"pc-33410":Q(10000,16,"Neoprávněné vlastnění tlumiče zbraně","PC § 33410","Felony","Držení nebo výroba tlumiče hluku střelné zbraně je v Kalifornii zakázáno.","Felony: 16 měs., 2 nebo 3 roky.","Zajisti tlumič a zbraň a ověř sériová čísla."),
+"pc-30306":Q(1000,12,"Neoprávněný prodej munice","PC § 30306","Wobbler","Dodání nebo prodej munice osobě, která ji nesmí mít (nezletilá, zakázaná) nebo bez povolení.","Wobbler: do 1 roku a do $1 000 (ověř).","Zajisti munici, doklady o prodeji a kupujícího."),
+"pc-27545":Q(1000,12,"Neoprávněný prodej střelné zbraně","PC §§ 27545, 27590","Misdemeanor","Prodej nebo předání střelné zbraně bez licencovaného prodejce a kontroly (ověř přesné znění).","Misdemeanor: do 1 roku (ověř).","Zajisti zbraň, sériová čísla a kupní doklady."),
+"pc-236-1":Q(500000,60,"Obchodování s lidmi (Human Trafficking)","PC § 236.1","Felony","Zajištění, přemístění nebo držení osoby pro nucenou práci, služby nebo sexuální vykořisťování.","Felony: 5, 8, 12 let (u některých forem 8, 14, 20); pokuta až $500 000 (ověř).","Chraň oběť, zajisti důkazy, předej FBI nebo specializované jednotce."),
+"pc-532":Q(10000,12,"Podvod (Fraud)","PC §§ 532, 532a","Wobbler","Úmyslné získání majetku nebo služeb lstí nebo nepravdivým tvrzením.","Wobbler: do 1 roku nebo 16 měs./2/3 roky; pokuta do $10 000.","Zajisti doklady, komunikaci a vazby."),
+"pc-664":Q(10000,60,"Pokus o vraždu (Attempted Murder)","PC §§ 664, 187","Felony","Přímý krok k vraždě se záměrem zabít, který nebyl dokonán.","Felony: bez premeditace 5, 7 nebo 9 let; s premeditací doživotí (ověř).","Zajisti místo, ošetření, zbraň a svědky."),
+"pc-646-9":Q(1000,12,"Pronásledování (Stalking)","PC § 646.9","Wobbler","Úmyslné opakované pronásledování nebo obtěžování, které vyvolává u oběti strach o bezpečí.","Wobbler: do 1 roku a $1 000 nebo 16 měs./2/3 roky.","Zdokumentuj zprávy, sledování a oběť, zvaž ochranný příkaz."),
+"pc-246-3":Q(10000,12,"Neopatrná střelba (Negligent Discharge)","PC § 246.3","Wobbler","Úmyslné vystřelení z hrubé nedbalosti způsobem, který může způsobit zranění nebo smrt.","Wobbler: do 1 roku a $10 000 nebo 16 měs./2/3 roky.","Zajisti nábojnice, zbraň a směr střelby."),
+"pc-26100":Q(10000,24,"Střelba z vozidla (Drive-By)","PC § 26100","Wobbler","Vystřelení ze vozidla na osobu nebo obydlí.","Wobbler: 16 měs., 2 nebo 3 roky, u úmyslu zabít přísněji (ověř).","Zajisti vozidlo, nábojnice a kamerové záznamy."),
+"pc-518":Q(10000,24,"Vydírání (Extortion)","PC §§ 518, 520","Felony","Získání majetku nebo souhlasu použitím síly nebo hrozby (např. zveřejnění tajemství).","Felony: 2, 3 nebo 4 roky.","Zajisti zprávy a komunikaci s obětí."),
+"pc-186-22":Q(10000,24,"Zločinné spolčení / gangy (STEP Act)","PC § 186.22","Wobbler","Aktivní účast v kriminálním gangu a spáchání nebo napomáhání trestné činnosti.","Wobbler: 16 měs., 2 nebo 3 roky; vysoké navýšení u dalších deliktů.","Zdokumentuj gang, členy a tetování, zapojení gang experta."),
+"pc-261":Q(10000,36,"Znásilnění (Rape)","PC § 261","Felony","Pohlavní styk bez souhlasu osoby, vynucený násilím, hrozbou nebo při neschopnosti dát souhlas.","Felony: 3, 6 nebo 8 let (u některých forem více).","Zajisti oběť, lékařské vyšetření a důkazy bez kontaminace."),
+"pc-503":Q(10000,12,"Zpronevěra (Embezzlement)","PC §§ 503, 504","Wobbler","Úmyslné přisvojení majetku, který byl svěřen pachateli.","Wobbler: do 1 roku nebo 16 měs./2/3 roky.","Zajisti finanční záznamy a svědky."),
+"pc-4530":Q(10000,24,"Útěk z vězení (Escape)","PC § 4530","Wobbler","Útěk nebo pokus o útěk osoby, která je ve vazbě nebo ve výkonu trestu.","Wobbler: 16 měs., 2 nebo 3 roky (ověř).","Vyhlásit pátrání, zajistit místo útěku, informovat Marshals."),
+"pc-451":Q(10000,24,"Žhářství (Arson)","PC § 451","Felony","Úmyslné nebo zlomyslné zapálení nebo spálení budovy, vozidla či lesa.","Felony: nejčastěji 2–9 let podle okolností a zranění (ověř).","Zajisti místo požáru, hasiče a vyšetřovatele požárů."),
+"hs-11358":Q(500,6,"Pěstování marihuany bez povolení","H&S § 11358","Misdemeanor","Pěstování nebo sklizeň marihuany nad povolený počet nebo bez povolení.","Misdemeanor: do 6 měsíců a $500 (ověř); felony při přitěžujících okolnostech.","Zajisti rostliny a zdokumentuj počet a místo."),
+"hs-11360":Q(500,6,"Prodej marihuany","H&S § 11360","Misdemeanor","Prodej, přeprava nebo nabídka marihuany bez licence.","Misdemeanor: do 6 měsíců a $500; felony u zvláštních případů (ověř).","Zajisti zboží, komunikaci a peníze."),
+"hs-11366":Q(10000,16,"Udržování místa pro užívání drog","H&S § 11366","Wobbler","Otevření nebo udržování místa pro prodej, rozdávání nebo užívání kontrolovaných látek.","Wobbler: 16 měs., 2 nebo 3 roky.","Zajisti důkazy o provozu místa a svědky."),
+"hs-11370-1":Q(10000,24,"Ozbrojené držení drog (Gun + Drugs)","H&S § 11370.1","Felony","Držení určitých kontrolovaných látek spolu s nabitou zbraní.","Felony: 2, 3 nebo 4 roky.","Zajisti zbraň, látky a prokaž dosah."),
+"hs-11379-6":Q(50000,36,"Výroba narkotik a laboratoře","H&S § 11379.6","Felony","Výroba nebo příprava kontrolované látky (např. metamfetamin), včetně chemikálií a zařízení.","Felony: 3, 5 nebo 7 let; pokuta do $50 000.","Zajisti lab, nebezpečné látky, hasiče a specialisty."),
+"vc-22106":Q(238,0,"Couvání na zakázaném místě","VC § 22106","Infraction","Couvání je zakázáno, pokud není bezpečné nebo ohrožuje provoz.","Infraction: orientačně $238.","Zdokumentuj místo a ohrožení."),
+"vc-25950":Q(197,0,"Nepovolené světelné úpravy (LED, neony)","VC § 25950 a násl.","Infraction","Zakázané barvy a typy světel na vozidle (např. modrá, červená, blikající).","Infraction/fix-it: orientačně $197 (ověř).","Zdokumentuj úpravu a barvu světel.")
+});
+// ===== Odstranění duplicit =====
+delete D["vc-22102"];delete D["reckless-driving"]; // totéž jako vc-22100 a vc-23103
+{
+  const vyřadit={"Vehicle Codes":["vc-22102"],"Traffic Law":["reckless-driving"]};
+  for(const c of Object.keys(C)){
+    const seen=new Set(),skip=vyřadit[c]||[];
+    C[c]=C[c].split(",").filter(k=>{if(seen.has(k)||skip.includes(k))return false;seen.add(k);return true}).join(","); // zbaví se dvojího výskytu stejného klíče
+  }
+}
+// ===== DOPLNĚNO DODATEČNĚ (položky, které jsem původně vynechal) =====
+C["Penal Codes"]+=",pc-401,pc-243-4";
+C["Vehicle Codes"]+=",vc-24250";
+Object.assign(D,{
+"pc-401":Q(10000,16,"Napomáhání k sebevraždě (Aiding Suicide)","PC § 401","Felony","Trestný čin je záměrné napomáhání nebo navádění jiné osoby k sebevraždě. Zákon ji nechápe jako pomoc, ale jako delikt (výjimky řeší zvláštní zákon o ukončení života, H&S § 443 a násl.).","Felony: nejčastěji 16 měs., 2 nebo 3 roky (ověř).","Zajisti místo a důkazy, vezmi výpovědi a zavolej EMS. Věc předej detektivům."),
+"pc-243-4":Q(2000,12,"Sexuální napadení / sexuální nátlak (Sexual Battery)","PC § 243.4","Wobbler","Dotek intimních částí těla jiné osoby proti její vůli, z důvodu sexuálního uspokojení nebo ponížení. Poznámka: nejasný název „sexuální nátlak“ ze serveru jsem přiřadil k tomuto paragrafu (ověř, zda to tak míníš).","Wobbler: do 1 roku a do $2 000 nebo 2, 3 nebo 4 roky.","Zajisti oběť, lékařské vyšetření a svědky, nekontaminuj důkazy."),
+"vc-24250":Q(197,0,"Zakrytá, tmavá nebo nefunkční světla","VC §§ 24250, 24252, 24400, 24603","Infraction","Za tmy musí mít vozidlo funkční a viditelná světla (potkávací, zadní a brzdová). Zakrytá nebo nefunkční světla jsou přestupek.","Infraction/fix-it: orientačně $197 (ověř).","Zdokumentuj stav světel, vydej fix-it citaci.")
 });
 // ===== LOGIKA =====
 const $=s=>document.querySelector(s),nav=$("#nav"),main=$("#main");
@@ -1639,4 +1696,3 @@ run();
 })();
 </script>
 </body></html>
-
